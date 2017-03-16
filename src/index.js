@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-app.get('/items', itemController.getItems);
+app.get('/items', itemController.getItems.bind(itemController));
+app.get('/items/:id', itemController.getItem.bind(itemController));
 
 app.listen(port, () => console.log(`App listening on port ${port}!`));
