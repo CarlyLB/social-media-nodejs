@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.2.2",
+    "flow-bin": "^0.41.0",
+    "flow-typed": "^2.0.0",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "package": "babel src/ -d build/",
+    "debug": "babel-node debug src/index.js",
+    "start": "nodemon --exec babel-node src/index.js",
+    "flow": "flow",
+    "flow-force": "flow-typed install --overwrite && flow"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.1",
+    "express": "^4.15.2",
+    "helmet": "^3.5.0"
+  }
+}
