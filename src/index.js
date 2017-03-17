@@ -9,7 +9,7 @@ import bodyParser from 'body-parser';
 import ItemController from './ItemController';
 
 const app = express();
-const port: * = process.env.PORT || 3000;
+const port: * = process.env.PORT || 3001;
 const itemController = new ItemController();
 
 // Some middleware
