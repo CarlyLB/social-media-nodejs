@@ -1,0 +1,5 @@
+---
+applications:
+- name: social-data-vis-bff
+  command: node ./build/index.js
+  memory: 512M
