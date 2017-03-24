@@ -6,11 +6,11 @@ import compression from 'compression';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
-import ItemController from './ItemController';
+import SocialMediaController from './controllers/SocialMediaController';
 
 const app = express();
 const port: * = process.env.PORT || 3001;
-const itemController = new ItemController();
+const socialMediaController = new SocialMediaController();
 
 // Some middleware
 app.use(cors());
@@ -21,7 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-app.get('/items', itemController.getItems.bind(itemController));
-app.get('/items/:id', itemController.getItem.bind(itemController));
+app.get('/topics', socialMediaController.getTopics);
 
 app.listen(port, () => console.log(`App listening on port ${port}!`));
