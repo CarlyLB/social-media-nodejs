@@ -12,6 +12,9 @@
     "flow-typed": "^2.0.0",
     "nodemon": "^1.11.0"
   },
+  "engines": {
+    "node": "7.0.0"
+  },
   "scripts": {
     "package": "babel src/ -d build/",
     "debug": "babel-node debug src/index.js",
