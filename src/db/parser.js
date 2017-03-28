@@ -104,9 +104,9 @@ export const processData = (data: *): Topic[] => {
             fear: d.doc.tone_fear,
             joy: d.doc.tone_joy,
             sadness: d.doc.tone_sadness,
-            text: d.doc.tweet_text,
-            at: Date.parse(d.doc.tweet_ts),
-            avatar: d.doc.tweet_user_profile_pic_url
+            text: d.doc.tweet_text || d.doc.text,
+            at: Date.parse(d.doc.tweet_ts || d.doc.ts),
+            avatar: d.doc.tweet_user_profile_pic_url || d.doc.user_profile_pic_url
         })
     });
 
